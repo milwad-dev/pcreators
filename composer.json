@@ -33,6 +33,10 @@
         }
     },
     "bin": ["bin/pcreators"],
+    "scripts": {
+        "test": "pest",
+        "test-coverage": "pest --coverage"
+    },
     "config": {
         "sort-packages": true,
         "allow-plugins": {
