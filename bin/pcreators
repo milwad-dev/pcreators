@@ -1,0 +1,41 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+/**
+ * pcreators - interactive PHP/Laravel package scaffolder.
+ */
+
+// Locate the Composer autoloader whether pcreators is run from its own
+// checkout or installed as a dependency inside another project.
+$autoloaders = [
+    __DIR__ . '/../vendor/autoload.php',       // local checkout
+    __DIR__ . '/../../../autoload.php',         // installed in vendor/bin
+];
+
+$loaded = false;
+foreach ($autoloaders as $file) {
+    if (file_exists($file)) {
+        require $file;
+        $loaded = true;
+        break;
+    }
+}
+
+if (! $loaded) {
+    fwrite(STDERR, "\nUnable to find the Composer autoloader. Run `composer install` first.\n\n");
+    exit(1);
+}
+
+use Pcreators\Commands\NewCommand;
+use Symfony\Component\Console\Application;
+
+$app = new Application('pcreators', '1.0.0');
+
+$command = new NewCommand();
+
+$app->add($command);
+$app->setDefaultCommand($command->getName(), true);
+
+$app->run();
