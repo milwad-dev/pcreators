@@ -1,0 +1,44 @@
+{
+    "name": "milwad/pcreators",
+    "description": "An interactive CLI to scaffold a production-ready PHP/Laravel package in seconds.",
+    "keywords": ["laravel", "php", "package", "scaffold", "generator", "skeleton", "cli"],
+    "homepage": "https://github.com/milwad-dev/pcreators",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Milwad Khosravi",
+            "email": "milwad.dev@gmail.com",
+            "homepage": "https://github.com/milwad-dev",
+            "role": "Author"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "laravel/prompts": "^0.3",
+        "symfony/console": "^6.4 || ^7.0",
+        "symfony/filesystem": "^6.4 || ^7.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pcreators\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pcreators\\Tests\\": "tests/"
+        }
+    },
+    "bin": ["bin/pcreators"],
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
