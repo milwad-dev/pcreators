@@ -6,7 +6,7 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/milwad-dev/pcreators/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/milwad-dev/pcreators/actions/workflows/tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/milwad/pcreators.svg?style=flat-square)](https://packagist.org/packages/milwad/pcreators)
 [![PHP Version](https://img.shields.io/packagist/php-v/milwad/pcreators?style=flat-square)](https://packagist.org/packages/milwad/pcreators)
-[![License](https://img.shields.io/packagist/l/milwad/pcreators.svg?style=flat-square)](LICENSE.md)
+[![License](https://img.shields.io/packagist/l/milwad/pcreators.svg?style=flat-square)](LICENSE)
 
 An interactive CLI that scaffolds a **production-ready PHP/Laravel package** in seconds. Answer a few prompts and get a complete, test-passing, CI-ready package skeleton.
 
