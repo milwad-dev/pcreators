@@ -1,0 +1,48 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+{{#command}}use {{ namespace }}\Commands\{{ main_class }}Command;
+{{/command}}use Illuminate\Support\ServiceProvider;
+
+final class {{ provider_class }} extends ServiceProvider
+{
+    /**
+     * Register package bindings and merge the default config.
+     */
+    public function register(): void
+    {
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/{{ config_key }}.php',
+            '{{ config_key }}'
+        );
+
+        $this->app->singleton({{ main_class }}::class, fn () => new {{ main_class }});
+    }
+
+    /**
+     * Bootstrap publishing, migrations, routes and views.
+     */
+    public function boot(): void
+    {
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../config/{{ config_key }}.php' => config_path('{{ config_key }}.php'),
+            ], '{{ name }}-config');
+
+{{#migration}}            $this->publishes([
+                __DIR__.'/../database/migrations' => database_path('migrations'),
+            ], '{{ name }}-migrations');
+
+{{/migration}}{{#command}}            $this->commands([
+                {{ main_class }}Command::class,
+            ]);
+{{/command}}        }
+
+{{#migration}}        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+{{/migration}}{{#routes}}        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+{{/routes}}{{#views}}        $this->loadViewsFrom(__DIR__.'/../resources/views', '{{ config_key }}');
+{{/views}}    }
+}
