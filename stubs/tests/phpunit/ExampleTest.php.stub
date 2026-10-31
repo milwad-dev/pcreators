@@ -1,0 +1,23 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }}\Tests\Feature;
+
+use {{ namespace }}\{{ main_class }};
+{{#laravel}}use {{ namespace }}\Tests\TestCase;
+{{/laravel}}{{#php}}use PHPUnit\Framework\TestCase;
+{{/php}}
+
+final class ExampleTest extends TestCase
+{
+    public function test_it_exposes_a_version(): void
+    {
+        $this->assertSame('1.0.0', (new {{ main_class }})->version());
+    }
+{{#laravel}}
+    public function test_it_registers_the_config(): void
+    {
+        $this->assertTrue(config('{{ config_key }}.enabled'));
+    }
+{{/laravel}}}
