@@ -1,0 +1,8 @@
+{{#laravel}}includes:
+    - vendor/larastan/larastan/extension.neon
+
+{{/laravel}}parameters:
+    level: 5
+    paths:
+        - src
+    tmpDir: build/phpstan
