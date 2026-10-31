@@ -1,0 +1,18 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | {{ title }} Configuration
+    |--------------------------------------------------------------------------
+    |
+    | Published with: php artisan vendor:publish --tag="{{ name }}-config"
+    |
+    */
+
+    'enabled' => true,
+
+];
