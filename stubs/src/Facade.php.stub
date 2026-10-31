@@ -1,0 +1,20 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }}\Facades;
+
+use Illuminate\Support\Facades\Facade;
+
+/**
+ * @see \{{ namespace }}\{{ main_class }}
+ *
+ * @method static string version()
+ */
+final class {{ main_class }} extends Facade
+{
+    protected static function getFacadeAccessor(): string
+    {
+        return \{{ namespace }}\{{ main_class }}::class;
+    }
+}
