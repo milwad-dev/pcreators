@@ -35,7 +35,14 @@ $app = new Application('pcreators', '1.0.0');
 
 $command = new NewCommand();
 
-$app->add($command);
+// Symfony Console 7.4 introduced addCommand() and removed add() in 8.0;
+// support the whole 6.4 / 7.x / 8.x range.
+if (method_exists($app, 'addCommand')) {
+    $app->addCommand($command);
+} else {
+    $app->add($command);
+}
+
 $app->setDefaultCommand($command->getName(), true);
 
 $app->run();
