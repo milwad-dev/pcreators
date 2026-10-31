@@ -1,0 +1,16 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+final class {{ main_class }}
+{
+    /**
+     * The package's entry point. Replace this with your own API.
+     */
+    public function version(): string
+    {
+        return '1.0.0';
+    }
+}
