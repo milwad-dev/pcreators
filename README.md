@@ -1,6 +1,16 @@
-# pcreators
+# PCreators
+
+<img src="https://banners.beyondco.de/PCreators.png?theme=dark&packageManager=composer+require&packageName=milwad%2Fpcreators&pattern=wiggle&style=style_2&description=create+the+base+structure+of+a+PHP+or+Laravel+package+in+one+command&md=1&showWatermark=1&fontSize=100px&images=https%3A%2F%2Fwww.php.net%2Fimages%2Flogos%2Fnew-php-logo.svg" alt="pcreators-banner">
+
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/milwad/pcreators.svg?style=flat-square)](https://packagist.org/packages/milwad/pcreators)
+[![Tests](https://img.shields.io/github/actions/workflow/status/milwad-dev/pcreators/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/milwad-dev/pcreators/actions/workflows/tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/milwad/pcreators.svg?style=flat-square)](https://packagist.org/packages/milwad/pcreators)
+[![PHP Version](https://img.shields.io/packagist/php-v/milwad/pcreators?style=flat-square)](https://packagist.org/packages/milwad/pcreators)
+[![License](https://img.shields.io/packagist/l/milwad/pcreators.svg?style=flat-square)](LICENSE.md)
 
 An interactive CLI that scaffolds a **production-ready PHP/Laravel package** in seconds. Answer a few prompts and get a complete, test-passing, CI-ready package skeleton.
+
+
 
 ```
 $ pcreators
