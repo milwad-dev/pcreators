@@ -1,0 +1,4 @@
+providers:
+  - {{ namespace }}\{{ provider_class }}
+
+migrations: true
