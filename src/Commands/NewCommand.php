@@ -93,7 +93,7 @@ final class NewCommand extends Command
         // ---- Tooling ----
         $phpVersion = select(
             label: 'Minimum PHP version',
-            options: ['8.4', '8.3', '8.2', '8.1'],
+            options: ['8.5', '8.4', '8.3', '8.2', '8.1'],
             default: '8.2',
         );
 

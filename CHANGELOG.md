@@ -14,3 +14,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   PHPStan/Larastan, Pint), facade, Artisan command, migration, routes, views.
 - Feature-aware `composer.json` generation.
 - Pest test suite covering the generator end to end.
+- PHP 8.5 support (wizard option and CI matrix).
