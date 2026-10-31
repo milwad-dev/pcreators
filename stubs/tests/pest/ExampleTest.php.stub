@@ -1,0 +1,14 @@
+<?php
+
+declare(strict_types=1);
+
+use {{ namespace }}\{{ main_class }};
+
+it('exposes a version', function () {
+    expect((new {{ main_class }})->version())->toBe('1.0.0');
+});
+{{#laravel}}
+it('registers the config', function () {
+    expect(config('{{ config_key }}.enabled'))->toBeTrue();
+});
+{{/laravel}}
