@@ -1,0 +1,21 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }}\Commands;
+
+use Illuminate\Console\Command;
+
+final class {{ main_class }}Command extends Command
+{
+    protected $signature = '{{ config_key }}:run';
+
+    protected $description = 'Run the {{ title }} command.';
+
+    public function handle(): int
+    {
+        $this->info('{{ title }} command executed successfully.');
+
+        return self::SUCCESS;
+    }
+}
