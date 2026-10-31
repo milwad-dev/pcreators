@@ -122,4 +122,19 @@ lands at `src/<Name>ServiceProvider.php`.
 
 ## License
 
-MIT.
+* This package is created and modified by <a href="https://github.com/milwad-dev" target="_blank">Milwad Khosravi</a> for Laravel/PHP has been released under the MIT License.
+
+## Contributing
+
+This project exists thanks to all the people who contribute. [CONTRIBUTING](https://github.com/milwad-dev/pcreators/graphs/contributors)
+
+<a href="https://github.com/milwad-dev/pcreators/graphs/contributors"><img src="https://opencollective.com/pcreators/contributors.svg?width=890&button=false" /></a>
+
+## Security
+
+If you've found a security bug, please email [milwad.dev@gmail.com](mailto:milwad.dev@gmail.com) instead of using the issue tracker.
+
+## Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=milwad-dev/pcreators&type=Date)](https://star-history.dera.page/#milwad-dev/pcreators&Date)
+
